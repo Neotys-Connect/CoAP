@@ -1,6 +1,6 @@
 # CoAP
 
-##CoAP request
+## CoAP request
 This advanced action allows you to send CoAP requests from [NeoLoad](https://www.neotys.com/neoload/overview)
 
 | Property | Value |
@@ -22,7 +22,7 @@ This advanced action allows you to send CoAP requests from [NeoLoad](https://www
 
 1. Read the NeoLoad documentation to see [How to use an Advanced action](https://www.neotys.com/documents/doc/neoload/latest/en/html/#25929.htm)
 
-##Parameters
+## Parameters
 | Name             | Description |
 | -----            | ----- |
 | Method | Method to use to send the request to the server. Possible value are **GET**, **POST**, **PUT**, **DELETE** |
@@ -37,5 +37,5 @@ This advanced action allows you to send CoAP requests from [NeoLoad](https://www
 | Etag (optional) | Adds an etag to the request. Value needs to be in hex format without the 0x |
  You can also add any parameter with any name and value. NeoLoad will concatenate them in the path for a GET, and in the payload for a POST or PUT.
 
-##Status Codes
+## Status Codes
 * NL-CoAPClient-01 : No response from the CoAP server
