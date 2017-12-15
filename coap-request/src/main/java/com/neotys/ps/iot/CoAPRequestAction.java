@@ -25,10 +25,11 @@ public final class CoAPRequestAction implements Action{
 	@Override
 	public List<ActionParameter> getDefaultActionParameters() {
 		final List<ActionParameter> parameters = new ArrayList<ActionParameter>();
-		/** TODO Add default parameters
-            Example parameter :
-            parameters.add(new ActionParameter("Method","GET"));
-        **/
+        parameters.add(new ActionParameter("Method", "GET"));
+        parameters.add(new ActionParameter("Server", ""));
+        parameters.add(new ActionParameter("Port", "5683"));
+        parameters.add(new ActionParameter("Path", ""));
+
 		return parameters;
 	}
 
@@ -44,14 +45,25 @@ public final class CoAPRequestAction implements Action{
 
 	@Override
 	public boolean getDefaultIsHit(){
-		return false;
+		return true;
 	}
 
 	@Override
 	public String getDescription() {
 		final StringBuilder description = new StringBuilder();
-		// TODO Add description
-		description.append("CoAPRequest description.\n");
+        description.append("This advanced action sends a CoAP request.\n\n");
+        description.append("Possible parameters are:\n");
+        description.append("  - Method (required): Method to use to send the request to the server. Possible value are GET, POST, PUT, DELETE\n");
+        description.append("  - Server (required): address of the CoAP server\n");
+        description.append("  - Port (required): Port of the CoAP endpoint\n");
+        description.append("  - Path (optional): Path to the URI without the first /\n");
+        description.append("  - Confirmable (optional): Set to true or false.\n    If true, request is confirmable. If false, request is non-confirmable.\n");
+        description.append("  - Payload (optional): Send a payload along a POST or PUT request\n");
+        description.append("  - Token (optional): Specifies a token for the request\n");
+        description.append("  - If-None-Match (optional): Adds the If-None-Match header in a PUT request. No value needs to be specified\n");
+        description.append("  - If-Match (optional): Adds an If-Match header in a PUT request. Value needs to be an hex etag without the 0x\n");
+        description.append("  - Etag (optional): Adds an etag to the request. Value needs to be in hex format without the 0x\n");
+        description.append("You can also add any parameter with any name and value. NeoLoad will concatenate them in the path for a GET, and in the payload for a POST or PUT.\n");
 		return description.toString();
 	}
 
