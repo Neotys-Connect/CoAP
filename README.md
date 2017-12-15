@@ -6,10 +6,10 @@ This advanced action allows you to send CoAP requests from [NeoLoad](https://www
 | Property | Value |
 | -----| -------------- |
 | Maturity | Experimental |
-| Author   | Neotys Partner Team |
+| Author   | Neotys Professional Services |
 | License  | [BSD Simplified](https://www.neotys.com/documents/legal/bsd-neotys.txt) |
 | NeoLoad  | 6.1 (Enterprise or Professional Edition w/ Integration & Advanced Usage and NeoLoad Web option required)|
-| Requirements | NeoLoad Web SaaS subscription |
+| Requirements | |
 | Bundled in NeoLoad | No
 | Download Binaries | See the [latest release](https://github.com/ttheol/CoAP/releases/latest)
 
